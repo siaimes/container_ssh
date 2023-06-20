@@ -2,7 +2,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-apt update && apt install openssh-server -y
+apt-get update && apt-get install openssh-server -y
 
 SSH_DIR=/root/.ssh
 
