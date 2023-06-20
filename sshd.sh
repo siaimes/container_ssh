@@ -2,7 +2,7 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-apt-get update && apt-get install openssh-server -y
+apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y tzdata && apt-get install openssh-server -y
 
 SSH_DIR=/root/.ssh
 
